@@ -1,0 +1,22 @@
+
+public class Solution {
+
+	public static String reverseEachWord(String str) {
+		//Your code goes here
+		if(str.length()==0)
+		{
+			return null;
+		}
+		String arr[] = str.split(" ");
+		String r = "";
+	    for(String w:arr)
+		{
+			StringBuilder s= new StringBuilder(w) ;
+			s.reverse();
+			String nw = s.toString();
+			r = r.concat(nw+" ");
+		}
+		return r;
+	}
+
+}
