@@ -1,0 +1,13 @@
+public class Solution {
+    
+    public static int max_number(int n){
+                
+        int max = 0;
+        for (int i = 1; i < n; i *= 10) {
+            max = Math.max(max, n % i + n / (i * 10) * i);
+        }
+        return max;
+    }
+    
+
+}
