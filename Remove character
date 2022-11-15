@@ -1,0 +1,25 @@
+import java.util.*;
+public class Solution {
+
+	public static String removeAllOccurrencesOfChar(String str, char ch) {
+		// Your code goes here
+		if(str.length()==0)
+		{
+			return null;
+		}
+		String sb = new String();
+		for(int i=0; i<str.length(); i++)
+		{
+			if((int)str.charAt(i) == (int)ch)
+			{
+				continue;
+			}
+			else
+			{
+				sb+=str.charAt(i);
+			}
+		}
+		return sb;
+	}
+
+}
