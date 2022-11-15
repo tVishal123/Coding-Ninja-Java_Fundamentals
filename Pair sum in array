@@ -1,0 +1,24 @@
+public class Solution {	
+
+	public static int pairSum(int[] arr, int num) {
+		//Your code goes here
+		if(arr.length==0)
+        {
+            return 0;
+        }
+		  int c=0;
+		  int len = arr.length;
+        for (int i = 0; i <len; i++) {
+            for (int j = i+1; j <len; j++) {
+               
+                    int total = arr[i]+arr[j];
+                    if (total==num){
+                        c++;
+                    }
+
+                
+            }
+        }
+        return (c);
+	}
+}
