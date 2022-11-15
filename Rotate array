@@ -1,0 +1,23 @@
+
+public class Solution {  
+
+    public static void rotate(int[] arr, int d) {
+    	//Your code goes here
+        int[] na=new int[d];
+        int len = arr.length;
+        for(int i=0;i<d;i++)
+        {
+            na[i]=arr[i];
+        }
+        for(int i=d;i<len;i++)
+        {
+            arr[i-d]=arr[i];
+        }
+        int k=0;
+        for(int i=len-d;i<len;i++)
+        {
+            arr[i]=na[k++];
+        }
+    }
+
+}
