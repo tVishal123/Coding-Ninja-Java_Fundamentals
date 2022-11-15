@@ -1,0 +1,25 @@
+public class Solution {  
+
+    public static void pushZerosAtEnd(int[] arr) {
+    	//Your code goes here
+        int i =0;
+        int p =0;
+        while(p<arr.length)
+        {
+            if(arr[p] == 0)
+            {
+                p++;
+            }
+            else
+            {
+                int t = arr[i];
+                arr[i] = arr[p];
+                arr[p] = t;
+             i++;
+             p++;
+            }
+        }
+        
+    }
+
+}
